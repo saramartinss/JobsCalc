@@ -49,7 +49,7 @@ const initDb = {
 	) VALUES (
 			"Pizzaria Guloso",
 			2,
-			1,
+			30,
 			1617514376018
 	);`);
 
