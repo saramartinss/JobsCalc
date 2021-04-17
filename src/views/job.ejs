@@ -32,6 +32,12 @@
           <fieldset>
             <legend>Dados do Job</legend>
             <div class="separator light"></div>
+            
+            <% errors?.forEach(error => {  %>
+              <div class="error">
+                <%= error.text%> 
+              </div>
+            <%  }) %> 
 
             <div class="input-wrapper">
               <label for="name">Nome do Job</label>

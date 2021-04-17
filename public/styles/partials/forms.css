@@ -19,6 +19,19 @@ fieldset .separator {
   margin-bottom: 2rem;
 }
 
+fieldset .error {
+  display: inline-block;
+  font-family: IBM Plex Sans;
+  font-weight: 500;
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #787880;
+  background-color: #ffc7c7;
+  border: 1px solid #E1E3E6;
+  border-radius: .313rem;
+  padding: 0.75rem 1.5rem;
+}
+
 form .input-group {
   display: flex;
   margin-top: 1.5rem;
