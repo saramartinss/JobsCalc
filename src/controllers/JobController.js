@@ -14,6 +14,29 @@ module.exports = {
       errors.push({ text: "Nome inválido" });
     }
 
+    if (req.body["daily-hours"] == "" || req.body["daily-hours"] == null) {
+      errors.push({ text: "Número de horas por dia é obrigatório" });
+    }
+
+    if (req.body["total-hours"] == "" || req.body["total-hours"] == null) {
+      errors.push({ text: "Estimativas de horás para o job é obrigatória" });
+    }
+
+    const profile = await Profile.get();
+
+    if (req.body["daily-hours"] > profile["hours-per-day"]) {
+      errors.push({
+        text: "O número de horas por dia excede as horas de trabalho diária",
+      });
+    }
+
+    if (req.body["daily-hours"] > req.body["total-hours"]) {
+      errors.push({
+        text:
+          "O número de horas por dia não pode ser maior que a estimativa de horas para o job",
+      });
+    }
+
     if (errors.length > 0) {
       return res.render("job", { errors });
     } else {
