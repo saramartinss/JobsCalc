@@ -41,6 +41,12 @@ form .input-wrapper {
   width: 50%;
 }
 
+form .select-option {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
 form .input-group .input-wrapper+.input-wrapper {
   margin-left: 1.5rem;
 }
@@ -56,19 +62,22 @@ label {
 }
 
 input {
+  width: 100%;
+}
+
+input,
+select {
   font-family: IBM Plex Sans;
   font-weight: 500;
-
   background: #FCFDFF;
-
   border: 1px solid #E1E3E6;
   border-radius: .313rem;
-
-  padding: 0.75rem 1.5rem;
-
-  width: 100%;
-
+  padding: 0.75rem 1rem;
   color: var(--color-card-title);
+}
+
+select:focus-visible {
+  outline: none;
 }
 
 ::placeholder {

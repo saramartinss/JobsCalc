@@ -45,6 +45,7 @@ module.exports = {
         "daily-hours": req.body["daily-hours"],
         "total-hours": req.body["total-hours"],
         created_at: Date.now(), // atribuindo data de hoje
+        status: "progress",
       });
 
       return res.redirect("/");
@@ -75,6 +76,7 @@ module.exports = {
       name: req.body.name,
       "total-hours": req.body["total-hours"],
       "daily-hours": req.body["daily-hours"],
+      status: req.body.status,
     };
 
     await Job.update(updatedJob, jobId);

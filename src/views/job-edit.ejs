@@ -68,8 +68,19 @@
                   value="<%= job["total-hours"] %>" />
               </div>
             </div>
+         
+            <div class="separator light"></div>
+            
+            <div class="select-option">
+              <label for="status">Status</label>
+              <select name="status" id="status">
+                <option value="done" <% if (job.status === "done") { %> selected <% } %>>Finalizado</option>
+                <option value="progress" <% if (job.status === "progress") { %> selected <% } %> >Em andamento</option>
+              </select>
+            </div>
           </fieldset>
-    
+
+
         </form>
       </main>
       <aside class="card">

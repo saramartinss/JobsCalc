@@ -19,11 +19,8 @@ module.exports = {
     const updatedJobs = jobs.map((job) => {
       // ajustes no job
       const deadline = (job["total-hours"] / job["daily-hours"]).toFixed();
-      const status = deadline <= 0 ? "done" : "progress";
+      const status = job.status === "progress" ? "progress" : "done";
 
-      // status = done
-      // statusCount[done] += 1
-      // Somando a quantidade de status
       statusCount[status] += 1;
 
       jobTotalHours =
