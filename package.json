@@ -5,8 +5,7 @@
   "main": "src/server.js",
   "scripts": {
     "dev": "nodemon .",
-    "init-db": "node src/db/init.js",
-    "build": "CI= react-scripts build"
+    "init-db": "node src/db/init.js"
   },
   "keywords": [],
   "author": "",
